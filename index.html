@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -28,82 +30,627 @@
 <meta name="language" content="French">
 <meta name="geo.region" content="BI">
 <meta name="geo.placename" content="Bujumbura">
-    
+
+
+  <!-- Favicon -->
+<link rel="shortcut icon" href="assets/img/clients/client-1.svg" type="image/x-icon">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src=""></script>
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+
+    .cursor{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #faac04;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1000;
+      display: none;
+    }
+
+  </style>
+
 </head>
 
-<style>
-    body{
-       background:  linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url('soon.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
+<body class="index-page">
 
-</style>
-<body>
-    <div id="loading">
-        <div class="loading-bar"></div>
-        <h3 style="display: block;
-        font-size: 1.17em;
-        margin-before: 1em;
-        margin-after: 1em;
-        margin-start: 0;
-        margin-end: 0;
-        font-weight: bold; color: #335dd9;">Coming soon...</h3>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+     
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/clients/client-1.svg">
+                <h1 class="sitename">Nume</h1>
+                <span>dev</span>
+              </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="nav-link">Accueil</a></li>
+          <li><a href="#about" class="nav-link">Apropos</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#team" class="nav-link">Groupe</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">Commencer</a>
+
     </div>
-    
-    <style>
-        #loading {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        background: rgba(255, 255, 255, 0.7);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .loading-bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 5px;
-        background-color: #335dd9; 
-    }
-    
+  </header>
+
+  <main class="main">
+
+
+    <div class="cursor"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
+            <h1>Votre nouvelle expérience digitale avec Numedev</h1>
+            <p>Nous sommes une équipe passionnée par l'informatique et la programmation afin de partager notre expertise et vous aider à propulser votre carrière dans ce domaine.</p>
+            <div class="d-flex">
+              <a href="#contact" class="btn-get-started">Contactez nous</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="10">
+            <img src="assets/img/hero-img.svg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
+        
+
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+
+            <!--div class="swiper-slide">
+              <img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+            
+            </div-->
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 position-relative order-lg-last"  data-aos-delay="20">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+          </div>
+
+          <div class="col-lg-6 content">
+               <!-- Section Title -->
+          <div class="container section-title" >
+            <h2>A propos de nous</h2>
+            <p>
+              Numedev est une oorganisation des jeunes etudiants de l'universite du Burundi,Campus Kiriri offrant les differents services en informatique et programmation
+             </p>
+          </div><!-- End Section Title -->
+   
+
+            <ul >
+              <li>
+                <i class="bi bi-clock-history"></i>
+                <div>
+                  <h5>Historique</h5>
+                  <p>Créé en 2023 par <a href="//linkedin.com/in/emmadiblouwizeyimana">Emmadiblo</a> et ses collegues les étudiants à l'Université du Burundi, campus Kiriri.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-flag"></i>
+                <div>
+                  <h5>Missions</h5>
+                  <p> Fournir des formations de qualité en informatique programmation, développer des logiciels innovants et accompagner les jeunes talents dans leur parcours professionnel.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-eye"></i>
+                <div>
+                  <h5>Vision</h5>
+                  <p>Dévenir un leader le développement de solutions numériques en Afrique, en favorisant l'innovation et l'esprit d'entreprise.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-bullseye"></i>
+                <div>
+                  <h5>Slogan</h5>
+                  <p style="font-style: italic;">Propulsez votre avenir numérique.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" >
+        <h2>Nos Services</h2>
+        <p>Nous avons beaucoup des services auprès de vous</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6"  data-aos-delay="10">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <a href="" class="stretched-link">
+                <h3> Développement Web</h3>
+              </a>
+              <p>Nous créons des sites et applications web sur mesure pour répondre aux besoins spécifiques de votre entreprise. Que vous ayez besoin d'un site vitrine, d'une boutique en ligne (e-commerce), ou d'une application web, notre équipe est prête à vous accompagner à chaque étape du processus.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6"  data-aos-delay="20">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <a href="" class="stretched-link">
+                <h3>Développement d'Applications Mobiles</h3>
+              </a>
+              <p>Nous développons des applications mobiles pour Android et iOS, adaptées aux besoins spécifiques de votre entreprise. Que ce soit pour une application de gestion interne, une application pour vos clients, ou une application de e-commerce, nous nous occupons de toute la conception et du développement.
+
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6"  data-aos-delay="30">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <a href="" class="stretched-link">
+                <h3>Formation en Programmation</h3>
+              </a>
+              <p>Nos formations en programmation informatique sont adaptées à tous les niveaux. Que vous soyez débutant ou que vous souhaitiez approfondir vos connaissances.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6"  data-aos-delay="40">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-file-earmark"></i>
+              </div>
+              <a href="" class="stretched-link">
+                <h3>Formation en Bureautique</h3>
+              </a>
+              <p>Nous proposons des formations complètes en bureautique, pour vous aider à maîtriser les outils essentiels comme Microsoft Word, Excel, PowerPoint, ainsi que les outils Google Docs, Sheets, et Slides. Vous apprendrez à utiliser ces logiciels pour créer des documents professionnels, effectuer des analyses de données avancées, et réaliser des présentations percutantes.</p>
+              <a href="" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6"  data-aos-delay="50">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-tools"></i>
+              </div>
+              <a href="" class="stretched-link">
+                <h3>Formation en Maintenance Informatique</h3>
+              </a>
+              <p>Nos formations en maintenance informatique vous apprennent à diagnostiquer, réparer et entretenir vos équipements informatiques. Vous apprendrez à résoudre des pannes matérielles et logicielles, à assurer la maintenance préventive des systèmes, et à garantir la sécurité des données. Cette formation est essentielle pour ceux qui souhaitent assurer le bon fonctionnement de leurs infrastructures informatiques.</p>
+              <a href="" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6"  data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-gear"></i>
+              </div>
+              <a href="" class="stretched-link">
+                <h3>Formation en Informatique Générale et Avancée</h3>
+              </a>
+              <p>Cette formation couvre à la fois les bases de l'informatique et des sujets plus avancés comme les réseaux, la sécurité informatique, l'intelligence artificielle et la blockchain. Nous vous offrons une compréhension approfondie des systèmes informatiques, des algorithmes, et des technologies émergentes, pour vous préparer à évoluer dans le domaine technologique moderne.</p>
+              <a href="" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
 
     
-    .loading-bar {
-              width: 0%;
-              animation: load 0.8s linear infinite;
-              z-index: 9999;
-          }
-          
-          @keyframes load {
-              0% {
-                  width: 0%;
-                  transform: translateX(-100%);
-              }
-              50% {
-                  width: 100%;
-                  transform: translateX(0);
-              }
-              100% {
-                  width: 100%;
-                  transform: translateX(100%);
-              }
-          }
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" >
+        <h2>Notre groupe</h2>
+        <p>Nous sommes un groupe des informaticiens et programmeurs, chacun a sa role</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4"  style="display: flex; justify-content: center; align-items: center;">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  data-aos-delay="10">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="//linkedin.com/in/emmadiblouwizeyimana"><i class="bi bi-linkedin"></i></a>
+                  <a href="//github.com/emmadiblo"><i class="bi bi-github"></i></a>
+                  <a href="//facebook.com/emmadiblouwizeyimana"><i class="bi bi-facebook"></i></a>
+                  <a href="//x.com/emmadiblo"><i class="bi bi-twitter-x"></i></a>
+                  <a href="//instagram.com/emmadiblouwizeyimana"><i class="bi bi-instagram"></i></a>
+
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Emmanuel Uwizeyimana</h4>
+                <span>Directeur général</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  data-aos-delay="20">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  
+                  <a href="//facebook.com/merveu.bitangimana.9"><i class="bi bi-facebook"></i></a>
+
+                  <a href="//linkedin.com/in/merveu-bitangimana-6ab6a0342"><i class="bi bi-linkedin"></i></a>
+              
+                 <a href="//github.com/MerveuBit"><i class="bi bi-github"></i></a>
     
-    </style>
 
-<div class="content">
+               
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Merveu bitangimana</h4>
+                <span>Développeur web</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
 
-</div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  data-aos-delay="30">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                
+                  <a href="https://www.facebook.com/profile.php?id=100070591239714"><i class="bi bi-facebook"></i></a>
+     
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mike Bukuru</h4>
+                <span>Responsable commercial et marketing</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  data-aos-delay="40">
+          <div class="team-member">
+            <div class="member-img">
+              <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+              <div class="social">
+             
+                <a href="https://www.facebook.com/profile.php?id=100093702662255"><i class="bi bi-facebook"></i></a>
+   
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Mr Felician</h4>
+              <span>Techinicien en maintenance informatique</span>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  data-aos-delay="10">
+          <div class="team-member">
+            <div class="member-img">
+              <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+              <div class="social">
+    
+                <a href="https://www.facebook.com/muhizi.jeanjules"><i class="bi bi-facebook"></i></a>
+
+
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Jules Muhizi</h4>
+              <span>Responsable financier</span>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  data-aos-delay="10">
+          <div class="team-member">
+            <div class="member-img">
+              <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+              <div class="social">
+
+                <a href="https://www.facebook.com/eljanson.nzambimana"><i class="bi bi-facebook"></i></a>
+            
+
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Janvier Expendader</h4>
+              <span>Développeur desktop et mobile</span>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+    </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Contact</h2>
+        <p>Nous sommes à votre disposition pout toute question</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" >
+
+        <div class="row gy-4">
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <a href="https://www.google.com/maps/@-3.3936069,29.3949282,20.13z" target="_blank">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" >
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>Kiriri, Bujumbura Burundi</p>
+                </div>
+              </a>
+
+                </div>
+
+              <div class="col-md-6">
+                <a href="tel:+25765517561" target="_blank" >
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" >
+                  <i class="bi bi-telephone"></i>
+                  <h3>Appelez nous au</h3>
+                  <p> +257 65517561</p>
+                </div>
+              </a>
+
+              </div>
+
+              <div class="col-md-6">
+
+                <a href="mailto:contact@numedev.io" target="">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" >
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email </h3>
+                  <p>contact@numedev.io</p>
+                </div>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="" method="post" class="email-form" >
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre Nom" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Sujet du message" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Votre Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message  a été envoyé envoyé</div>
+
+                  <button type="submit">Envoyer le Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Numedev</h3>
+      <p>Soyez les bienvenus chez nous nous vous offrons des solutions digitales à vos problèmes.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href="https://linkedin.com/company/numedev"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        <span>Copyright &copy;  <script>document.write(new Date().getFullYear() );</script>  </span> <strong class="px-1 sitename">Numedev</strong> <span>Tous droits reserves</span>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bit.ly/numedev/">Numedev</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+<script>
+  // Add this to Votre main.js file or in a script tag
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function highlightNavLink() {
+      const scrollY = window.pageYOffset;
+      
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if(link.getAttribute('href').substring(1) === sectionId) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+
+
+    document.addEventListener('mousemove', e => {
+
+const cursor = document.querySelector('.cursor')
+
+setTimeout(() => {
+  cursor.style.top = e.pageY + 'px';
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.display= 'block'
+}, 10);
+
+});
+
+
+
+
+    window.addEventListener('scroll', highlightNavLink);
+  });
+
+
+  </script>
 </html>
