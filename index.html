@@ -671,28 +671,36 @@
    * Preloader
    */
 
-  // Simuler le chargement réel des ressources
-  document.onreadystatechange = function () {
-    const loadingBar = document.getElementById('loadingBar');
+  const loadingBar = document.getElementById('loadingBar');
+  const overlay = document.getElementById('loadingOverlay');
 
-    // État du document
-    switch (document.readyState) {
-      case "interactive":
-        // Page en cours de chargement
-        loadingBar.style.width = "50%";
-        break;
-      case "complete":
-        // Tout est chargé
-        loadingBar.style.width = "100%";
+  let progress = 0;
+  let interval;
 
-        // Attendre un peu avant de retirer l'overlay
-        setTimeout(() => {
-          document.getElementById('loadingOverlay').style.display = "none";
-        }, 400);
-        break;
-    }
-  };
+  function simulateProgress() {
+    interval = setInterval(() => {
+      // Simule une progression jusqu'à 90%
+      if (progress < 90) {
+        progress += Math.random() * 5; // un peu aléatoire
+        loadingBar.style.width = progress + "%";
+      }
+    }, 200);
+  }
 
+  // Commence à simuler la progression
+  simulateProgress();
+
+  // Quand tout est chargé réellement
+  window.addEventListener("load", () => {
+    clearInterval(interval); // stop simulation
+    progress = 100;
+    loadingBar.style.width = "100%";
+
+    // Petite pause avant de cacher
+    setTimeout(() => {
+      overlay.style.display = "none";
+    }, 500);
+  });
   document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
